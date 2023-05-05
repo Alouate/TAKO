@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #FFF8ED;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  height: 400%;
+  width: 400%;
+  animation: bg 120s infinite linear;
+  opacity: .5;
+}
+
+.bg-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tako {
+  position: absolute;
+  height: 30%;
+  top: 3%;
+  left: 3%;
+}
+
+.qr {
+  position: absolute;
+  height: 35%;
+  top: 5%;
+  right: 10%;
+  transform: rotate(10deg);
+  border-radius: 16px;
+}
+
+.button {
+  height: 100%;
+  cursor: pointer;
+  transition: all .2s;
+  animation: button 1s infinite alternate;
+  pointer-events: all;
+  user-select: none;
+}
+
+.button-inactive {
+  animation-play-state: paused;
+  opacity: .3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.button-container {
+  position: absolute;
+  height: 12%;
+  bottom: 13%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.squid {
+  transition: all .4s;
+}
+
+.squid-active {
+  transform: scale(.85, 1.15);
+}
+
+.squid-container { 
+  position: absolute;
+  height: 30%;
+  top: 42%;
+  width: 100%;
+  animation: squid 3s infinite alternate;
+  display: flex;
+  justify-content: center;
+  margin-left: 24px;
+}
+
+.cloud {
+  position: absolute;
+  height: 8%;
+  bottom: -3%;
+  left: 50%;
+  transform: translate(-50%);
+  animation: clouds 10s infinite alternate linear;
+}
+
+@keyframes bg {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes clouds {
+  from {transform: translateX(-51%);}
+  to {transform: translateX(-49%);}
+}
+
+@keyframes button {
+  to {transform: scale(1.1);}
+}
+
+@keyframes squid {
+  from {transform: rotate(-5deg);}
+  to {transform: rotate(5deg);}
+}
